@@ -17,6 +17,8 @@ print("Please enter the data of the students using 'CWID:__, FirstName:__, LastN
 
 # define variables
 student_list = list() # list for student dictionary objects
+classid_dict = {}
+classid_list = list()
 count = 0 # loop counter
 
 # write output file, reset file if necessary
@@ -31,6 +33,7 @@ while count < students:
     # define variables
     student_dict = {}
     
+    # track current student count
     print("Student ", count + 1, "/", students)
     data = input("Enter data : ")
 
@@ -42,18 +45,34 @@ while count < students:
         key, value = e.split(':')
         # add key and value to student dictionary
         student_dict.update({key:value})
-        # add data to table in output file
+
+        # add to ClassID dictionary
+        if key == "ClassID":
+            if value in classid_dict:
+                # add student to the list of current ClassID
+                aa
+            else:
+                # add to dictionary if current ClassID does not exist
+            classid_dict[value].update(student_dict)
+            
+            # classid_dict.update({value:student_dict})
+            #print("class dict before loop end: ", classid_dict)
+
+        # output file code
         f = open('results.txt', mode='a')
         # create new line if at beginning
         if key == "CWID":
             f.writelines("\n")
+        # add data to table
         f.writelines('{:15s}'.format(value))
-        
         f.close()
-    # ---------- end for loop ----------
-    
+    # ---------- end for loop (data_list) ----------
+    #print("class dict after loop end: ", classid_dict)
     # add current student to the list of all students
     student_list.append(student_dict)
     # update loop count
     count += 1
-# ---------- end while loop ----------
+# ---------- end while loop (count < students) ----------
+
+print("class dict after while end: ", classid_dict)
+print("class list after while end: ", classid_list)

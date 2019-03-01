@@ -1,4 +1,2 @@
 CWID           First Name     Last Name      Gender         Birth Date     Class ID       Class Date     Grade          
-940114         Jongin         Kim            M              01/14/1994     12347          04/08/2012     B              
-921127         Chanyeol       Park           M              11/27/1992     12346          04/08/2012     C              
-930112         Kyungsoo       Do             M              01/12/1993     12348          04/08/2012     A              
+921127         Jongdae        Kim            M              09/21/1992     
